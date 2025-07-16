@@ -3,6 +3,7 @@ import { ArrowDownToLine } from 'lucide-react';
 import { FaWhatsapp } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
+import { FaEnvelope } from "react-icons/fa";
 
 const Hero = () => {
   return (
@@ -22,6 +23,9 @@ const Hero = () => {
           </a>
           <a href="https://github.com/jesuscestari" target="_blank" rel="noopener noreferrer">
            <FaGithub />
+          </a>
+          <a href="mailto:jesuscestari@proton.me" target="_blank" rel="noopener noreferrer">
+            <FaEnvelope />
           </a>
         </div>
 
