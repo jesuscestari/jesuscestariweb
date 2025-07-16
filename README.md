@@ -16,9 +16,6 @@ Este es el repositorio de mi portfolio personal, donde comparto mis proyectos, e
 - JavaScript
 - CSS
 
-## 🚀 ¿Cómo verlo en vivo?
-Puedes ver el portfolio online en [jesuscestari.com](https://jesuscestari.com)
-
 ---
 
 ¡Gracias por visitar mi portfolio! Si tienes alguna consulta o propuesta, no dudes en contactarme.
