@@ -7,14 +7,14 @@ const Portfolio = () => {
     {
       title: "elmenu.app",
       category: "App para restaurantes (Venezuela)",
-      image: "/logo2.png",
+      image: "/logo2.webp",
       color: "#ff6b6b",
       link: "https://elmenu.app"
     },
     {
       title: "bellumsoftware.com",
       category: "Agencia de desarrollo de páginas web",
-      image: "/logo.png",
+      image: "/logo.webp",
       color: "#8e44ad",
       link: "https://bellumsoftware.com"
     }
