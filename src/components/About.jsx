@@ -13,12 +13,12 @@ const About = () => {
     {
       emoji: "🗄️",
       title: "Bases de Datos & Backend",
-      description: "Experiencia en integración de sistemas, APIs y manejo de bases de datos como PostgreSQL, SQL Server y Supabase."
+      description: "Experiencia en integración de sistemas, APIs y manejo de bases de datos como PostgreSQL, SQL y Supabase."
     },
     {
       emoji: "🚀",
       title: "DevOps & Deploy",
-      description: "Automatizo despliegues y gestiono proyectos con Git, Docker y Vercel para lograr entregas rápidas y seguras."
+      description: "Automatizo despliegues y gestiono proyectos con Git, Docker, Coolify y Vercel para lograr entregas rápidas y seguras."
     },
 
   ]
