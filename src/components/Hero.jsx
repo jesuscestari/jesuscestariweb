@@ -1,4 +1,4 @@
-import prof from '../assets/prof.png'
+import prof from '../assets/prof.webp'
 import { ArrowDownToLine } from 'lucide-react';
 import { FaWhatsapp } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
