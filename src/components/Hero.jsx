@@ -9,11 +9,13 @@ const Hero = () => {
   return (
     <section className="hero">
       <div className="container">
+        <div className="profile-image-container">
         <img 
           src={prof} 
-          alt="Marcial Sartori" 
+          alt="Jesus Cestari foto de perfil" 
           className="profile-image"
         />
+        </div>
         <h1>Jesus Cestari</h1>
         <h2>Analista de Sistemas.</h2>
         

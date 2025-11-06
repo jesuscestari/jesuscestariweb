@@ -3,7 +3,7 @@ const About = () => {
     {
       emoji: "👋",
       title: "Sobre mí",
-      description: "Analista de Sistemas con 3+ años de experiencia en desarrollo web, especializado en React, Next.js y bases de datos. Apasionado por crear soluciones eficientes."
+      description: "Analista de Sistemas con 3+ años de experiencia en desarrollo web, especializado en React, Next.js y bases de datos."
     },
     {
       emoji: "⚛️",
