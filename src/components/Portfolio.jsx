@@ -1,18 +1,7 @@
 import { useState } from 'react'
 import { Sparkles } from 'lucide-react'
-import gaetanoseguros from '../assets/projects/gaetanoseguros.webp'
-import takesbyus from '../assets/projects/takesbyus.webp'
-import flora from '../assets/projects/flora.png'
-import conterra from '../assets/projects/conterra-screenshot.webp'
-import elmenu from '../assets/projects/engassistusa-screenshot.webp'
-import boda from '../assets/projects/boda-screenshot.webp'
-import sologeneradores from '../assets/projects/sologeneradores-screenshot.webp'
-import perfumesivilara from '../assets/projects/perfumesivilara-screenshot.webp'
-import clinicaoe from '../assets/projects/clinicaoe-screenshot.webp'
-import englishbyclau from '../assets/projects/englishbyclau-screenshot.webp'
-import selectstructural from '../assets/projects/selectstructural-screenshot.webp'
-import lenerzi from '../assets/projects/lenerzi.png'
-import desordenados from '../assets/projects/desordenados.png'
+
+import desordenados from '../assets/desordenados.png'
 
 const FaviconImage = ({ url, title, fallbackImage, useLocalImage, useLucideIcon }) => {
   const [currentSrc, setCurrentSrc] = useState(() => {
@@ -125,77 +114,65 @@ const Portfolio = () => {
   const webPages = [
     {
       title: "Arquitectura emocional",
-      image: flora,
       link: "https://floraguerra.vercel.app/",
       technologies: ["nextjs", "react", "html", "css", "tailwind"],
       useLucideIcon: true
     },
     {
       title: "Gaetano Seguros",
-      image: gaetanoseguros,
       link: "https://gaetanoseguros.com/",
       technologies: ["nextjs", "react", "html", "css", "tailwind"]
     },
     {
       title: "Takes by Us",
-      image: takesbyus,
       link: "https://www.takesbyus.com/",
       technologies: ["nextjs", "react", "html", "css", "tailwind"]
     },
     {
       title: "Conterra Desarrollos",
-      image: conterra,
       link: "https://conterradesarrollos.com/",
       technologies: ["nextjs", "react", "html", "css", "tailwind"]
     },
     {
       title: "elmenu.app",
-      image: elmenu,
       link: "https://elmenu.app/",
       technologies: ["nextjs", "react", "html", "css", "postgresql", "supabase"]
     },
     {
       title: "Sitio de Bodas",
-      image: boda,
       link: "https://boda-khaki.vercel.app/",
       technologies: ["nextjs", "react", "html", "css", "tailwind"],
       useLucideIcon: true
     },
     {
       title: "Solo Generadores",
-      image: sologeneradores,
       link: "https://www.sologeneradores.com/",
       technologies: ["nextjs", "react", "html", "css", "tailwind"]
     },
     {
       title: "Perfumes Ivilara",
-      image: perfumesivilara,
       link: "https://www.perfumesivilara.com/",
       technologies: ["nextjs", "react", "html", "css", "tailwind"]
     },
     {
       title: "Clínica OE",
-      image: clinicaoe,
       link: "https://clinicaoe.com.ar/",
       technologies: ["nextjs", "react", "html", "css", "tailwind"],
       useLucideIcon: true
     },
     {
       title: "English by Clau Academy",
-      image: englishbyclau,
       link: "https://www.englishbyclauacademy.com/",
       technologies: ["nextjs", "react", "html", "css", "tailwind"],
       useLucideIcon: true
     },
     {
       title: "Select Structural",
-      image: selectstructural,
       link: "https://www.selectstructural.com/",
       technologies: ["nextjs", "react", "html", "css", "tailwind"]
     },
     {
       title: "Lenerzi",
-      image: lenerzi,
       link: "https://www.lenerzi.com/",
       technologies: ["nextjs", "react", "html", "css", "tailwind"]
     },
