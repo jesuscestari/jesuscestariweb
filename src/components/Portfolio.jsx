@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import { Sparkles } from 'lucide-react'
+import { useLanguage } from '../contexts/LanguageContext'
+import { translations } from '../translations'
 
 import desordenados from '../assets/desordenados.png'
 
@@ -73,6 +75,8 @@ const FaviconImage = ({ url, title, fallbackImage, useLocalImage, useLucideIcon 
 }
 
 const Portfolio = () => {
+  const { language } = useLanguage()
+  const t = translations[language]
   const [activeTab, setActiveTab] = useState('proyectos')
 
   const getTechIcon = (tech) => {
@@ -87,7 +91,7 @@ const Portfolio = () => {
   const projects = [
     {
       title: "elmenu.app",
-      category: "App para restaurantes (Venezuela)",
+      category: t.portfolio.projects.elmenu.category,
       image: "/logo2.webp",
       color: "#ff6b6b",
       link: "https://elmenu.app",
@@ -95,7 +99,7 @@ const Portfolio = () => {
     },
     {
       title: "bellumsoftware.com",
-      category: "Agencia de desarrollo de páginas web",
+      category: t.portfolio.projects.bellum.category,
       image: "/logo.webp",
       color: "#8e44ad",
       link: "https://bellumsoftware.com",
@@ -103,7 +107,7 @@ const Portfolio = () => {
     },
     {
       title: "dolardehoy.app",
-      category: "Aplicación de cotización del dólar",
+      category: t.portfolio.projects.dolar.category,
       image: "/logo3.png",
       color: "#4a90e2",
       link: "https://dolardehoy.app",
@@ -197,19 +201,19 @@ const Portfolio = () => {
             className={`tab-btn ${activeTab === 'proyectos' ? 'active' : ''}`}
             onClick={() => setActiveTab('proyectos')}
           >
-            Proyectos relevantes
+            {t.portfolio.relevantProjects}
           </button>
           <button 
             className={`tab-btn ${activeTab === 'Paginas web' ? 'active' : ''}`}
             onClick={() => setActiveTab('Paginas web')}
           >
-            Paginas web
+            {t.portfolio.webPages}
           </button>
           <button 
             className={`tab-btn ${activeTab === 'habilidades' ? 'active' : ''}`}
             onClick={() => setActiveTab('habilidades')}
           >
-            Stack
+            {t.portfolio.stack}
           </button>
         </div>
 

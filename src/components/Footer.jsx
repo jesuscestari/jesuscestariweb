@@ -1,8 +1,14 @@
+import { useLanguage } from '../contexts/LanguageContext'
+import { translations } from '../translations'
+
 const Footer = () => {
+  const { language } = useLanguage()
+  const t = translations[language]
+
   return (
     <footer className="footer">
       <div className="container">
-        <p>© 2025 | Jesus Cestari</p>
+        <p>{t.footer.copyright}</p>
       </div>
     </footer>
   )

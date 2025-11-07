@@ -1,26 +1,31 @@
 import { User, Code, Database, Rocket } from 'lucide-react'
+import { useLanguage } from '../contexts/LanguageContext'
+import { translations } from '../translations'
 
 const About = () => {
+  const { language } = useLanguage()
+  const t = translations[language]
+
   const services = [
     {
       icon: User,
-      title: "Sobre mí",
-      description: "Analista de Sistemas con 3 años de experiencia en desarrollo web, especializado en React, Next.js y bases de datos."
+      title: t.about.aboutMe.title,
+      description: t.about.aboutMe.description
     },
     {
       icon: Code,
-      title: "Desarrollo Frontend",
-      description: "Construyo interfaces modernas y responsivas usando React, Next.js, HTML, CSS, Tailwind, shadcn/ui y TypeScript. Aprendiendo Astro y React Native."
+      title: t.about.frontend.title,
+      description: t.about.frontend.description
     },
     {
       icon: Database,
-      title: "Bases de Datos & Backend",
-      description: "Experiencia en integración de sistemas, APIs y manejo de bases de datos como PostgreSQL, SQL y Redis."
+      title: t.about.backend.title,
+      description: t.about.backend.description
     },
     {
       icon: Rocket,
-      title: "DevOps & Deploy",
-      description: "Automatizo despliegues y gestiono proyectos con Git, Docker, Coolify, Dockploy, Vercel y Netlify para lograr entregas rápidas y seguras."
+      title: t.about.devops.title,
+      description: t.about.devops.description
     },
 
   ]
