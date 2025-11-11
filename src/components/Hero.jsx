@@ -1,5 +1,5 @@
 import prof from '../assets/prof.webp'
-import { ArrowDownToLine } from 'lucide-react';
+import { ArrowDownToLine, MessageSquare } from 'lucide-react';
 import { FaWhatsapp } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
@@ -38,21 +38,27 @@ const Hero = () => {
 
         <div className="stats">
           <div className="stat">
-            <h3 className="stat-number">+3</h3>
+            <h3 className="stat-number">3</h3>
             <p>{t.hero.yearsExperience}</p>
           </div>
           <div className="stat">
-            <h3 className="stat-number">+25</h3>
+            <h3 className="stat-number">25</h3>
             <p>{t.hero.projectsCompleted}</p>
           </div>
         </div>
 
         <div className="cta-buttons">
           <a href={language === 'es' ? "/CV_CESTARI_JESUS.pdf" : "/CESTARI_JESUS_EN.pdf"} className="btn btn-primary" target="_blank">
-            {t.hero.cvButton} <ArrowDownToLine />
+            {t.hero.cvButton} <ArrowDownToLine size={14} />
           </a>
-          <a href={`https://api.whatsapp.com/send?phone=5491173672568&text=${language === 'es' ? '¡Hola!' : 'Hello!'}`} className="btn btn-secondary" target="_blank">
-            {t.hero.contactButton} <FaWhatsapp />
+          <a 
+            href={language === 'es' 
+              ? `https://api.whatsapp.com/send?phone=5491173672568&text=¡Hola!` 
+              : `sms:+5491173672568?body=Hello!`} 
+            className="btn btn-secondary" 
+            target={language === 'es' ? '_blank' : undefined}
+          >
+            {t.hero.contactButton} {language === 'es' ? <FaWhatsapp size={14} /> : <MessageSquare size={14} />}
           </a>
         </div>
       </div>
