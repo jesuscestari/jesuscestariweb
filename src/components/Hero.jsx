@@ -4,6 +4,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaEnvelope } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import { useLanguage } from '../contexts/LanguageContext'
 import { translations } from '../translations'
 
@@ -31,9 +32,13 @@ const Hero = () => {
           <a href="https://github.com/jesuscestari" target="_blank" rel="noopener noreferrer">
            <FaGithub />
           </a>
+          <a href="https://x.com/variansol" target="_blank" rel="noopener noreferrer">
+            <FaXTwitter />
+          </a>
           <a href="mailto:jesuscestari@proton.me" target="_blank" rel="noopener noreferrer">
             <FaEnvelope />
           </a>
+         
         </div>
 
         <div className="stats">
