@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Sparkles } from 'lucide-react'
 import { useLanguage } from '../contexts/LanguageContext'
 import { translations } from '../translations'
+import { motion, AnimatePresence } from 'motion/react'
 
 import desordenados from '../assets/desordenados.png'
 
@@ -98,6 +99,14 @@ const Portfolio = () => {
       technologies: ["nextjs", "react", "html", "css", "postgresql", "redis", "supabase", "coolify"]
     },
     {
+      title: "tiendea.app",
+      category: t.portfolio.projects.tiendea.category,
+      image: "/tiendeaLogo.png",
+      color: "#10b981",
+      link: "https://tiendea.app",
+      technologies: ["nextjs", "react", "html", "tailwind", "typescript", "vercel", "supabase", "postgresql"]
+    },
+    {
       title: "bellumsoftware.com",
       category: t.portfolio.projects.bellum.category,
       image: "/logo.webp",
@@ -111,7 +120,7 @@ const Portfolio = () => {
       image: "/logo3.png",
       color: "#4a90e2",
       link: "https://dolardehoy.app",
-      technologies: ["nextjs", "tailwind", "typescript", "html", "css", "dragonflydb", "coolify"]
+      technologies: ["nextjs", "tailwind", "typescript", "html", "dragonflydb", "coolify"]
     }
   ]
 
@@ -197,144 +206,212 @@ const Portfolio = () => {
     <section className="portfolio">
       <div className="container">
         <div className="tab-navigation">
-          <button 
+          <motion.button
             className={`tab-btn ${activeTab === 'proyectos' ? 'active' : ''}`}
             onClick={() => setActiveTab('proyectos')}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: "spring", stiffness: 400, damping: 17 }}
           >
             {t.portfolio.relevantProjects}
-          </button>
-          <button 
+          </motion.button>
+          <motion.button
             className={`tab-btn ${activeTab === 'Paginas web' ? 'active' : ''}`}
             onClick={() => setActiveTab('Paginas web')}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: "spring", stiffness: 400, damping: 17 }}
           >
             {t.portfolio.webPages}
-          </button>
-          <button 
+          </motion.button>
+          <motion.button
             className={`tab-btn ${activeTab === 'habilidades' ? 'active' : ''}`}
             onClick={() => setActiveTab('habilidades')}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: "spring", stiffness: 400, damping: 17 }}
           >
             {t.portfolio.stack}
-          </button>
+          </motion.button>
         </div>
 
-        {activeTab === 'proyectos' && (
-          <div className="projects-grid">
-            {projects.map((project, index) => (
-              <a
-                key={index}
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ textDecoration: 'none' }}
-              >
-                <div className="project-card" style={{
-                  background: 'linear-gradient(135deg, #32314e 60%, #232946 100%)',
-                  display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'space-between', cursor: 'pointer', padding: '20px 10px'}}>
-                  <div style={{flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
-                    <div style={{background: '#181c24', borderRadius: '12px', padding: '18px', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '12px', width: '90px', height: '90px'}}>
-                      <img src={project.image} alt={project.title} style={{maxWidth: '60px', maxHeight: '60px', objectFit: 'contain'}} />
+        <AnimatePresence mode="wait">
+          {activeTab === 'proyectos' && (
+            <motion.div
+              key="proyectos"
+              className="projects-grid"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3 }}
+            >
+              {projects.map((project, index) => (
+                <motion.a
+                  key={index}
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ textDecoration: 'none' }}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: index * 0.1 }}
+                >
+                  <motion.div
+                    className="project-card"
+                    style={{
+                      background: 'linear-gradient(135deg, #32314e 60%, #232946 100%)',
+                      display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'space-between', cursor: 'pointer', padding: '20px 10px'
+                    }}
+                    whileHover={{
+                      scale: 1.03,
+                      y: -8,
+                      transition: { type: "spring", stiffness: 300, damping: 20 }
+                    }}
+                  >
+                    <div style={{flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
+                      <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '12px', width: '120px', height: '120px'}}>
+                        <img src={project.image} alt={project.title} style={{
+                          maxWidth: project.title === 'tiendea.app' ? '60px' : '80px',
+                          maxHeight: project.title === 'tiendea.app' ? '60px' : '80px',
+                          objectFit: 'contain',
+                          filter: project.title === 'tiendea.app' ? 'brightness(0) invert(1)' : 'none'
+                        }} />
+                      </div>
+                      <div className="project-info" style={{textAlign: 'center'}}>
+                        <p className="project-category">{project.category}</p>
+                        <h3 className="project-title" style={{margin: 0, padding: 0}}>
+                          <span style={{color: '#fff', textDecoration: 'none', wordBreak: 'break-all'}}>{project.title}</span>
+                        </h3>
+                      </div>
                     </div>
-                    <div className="project-info" style={{textAlign: 'center'}}>
-                      <p className="project-category">{project.category}</p>
-                      <h3 className="project-title" style={{margin: 0, padding: 0}}>
-                        <span style={{color: '#fff', textDecoration: 'none', wordBreak: 'break-all'}}>{project.title}</span>
-                      </h3>
-                    </div>
-                  </div>
-                  {project.technologies && project.technologies.length > 0 && (
-                    <div style={{display: 'flex', gap: '8px', justifyContent: 'center', flexWrap: 'wrap', marginTop: '20px', paddingBottom: '10px'}}>
-                      {project.technologies.map((tech, techIndex) => (
-                        <img
-                          key={techIndex}
-                          src={getTechIcon(tech)}
-                          alt={tech}
-                          style={{width: '32px', height: '32px', objectFit: 'contain'}}
-                        />
-                      ))}
-                    </div>
-                  )}
-                </div>
-              </a>
-            ))}
-          </div>
-        )}
-
-        {activeTab === 'Paginas web' && (
-          <div className="web-pages-grid">
-            {webPages.map((page, index) => (
-              <a
-                key={index}
-                href={page.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ textDecoration: 'none' }}
-              >
-                <div className="web-page-card">
-                  <div style={{
-                    background: 'linear-gradient(135deg, #32314e 60%, #232946 100%)',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    padding: '20px 15px',
-                    height: '100%'
-                  }}>
+                    {project.technologies && project.technologies.length > 0 && (
+                      <div style={{display: 'flex', gap: '8px', justifyContent: 'center', flexWrap: 'wrap', marginTop: '20px', paddingBottom: '10px'}}>
+                        {project.technologies.map((tech, techIndex) => (
+                          <img
+                            key={techIndex}
+                            src={getTechIcon(tech)}
+                            alt={tech}
+                            style={{width: '32px', height: '32px', objectFit: 'contain'}}
+                          />
+                        ))}
+                      </div>
+                    )}
+                  </motion.div>
+                </motion.a>
+              ))}
+            </motion.div>
+          )}
+          {activeTab === 'Paginas web' && (
+            <motion.div
+              key="paginas-web"
+              className="web-pages-grid"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3 }}
+            >
+              {webPages.map((page, index) => (
+                <motion.a
+                  key={index}
+                  href={page.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ textDecoration: 'none' }}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.3, delay: index * 0.05 }}
+                >
+                  <motion.div
+                    className="web-page-card"
+                    whileHover={{
+                      scale: 1.05,
+                      y: -5,
+                      transition: { type: "spring", stiffness: 300, damping: 20 }
+                    }}
+                  >
                     <div style={{
-                      flex: 1,
+                      background: 'linear-gradient(135deg, #32314e 60%, #232946 100%)',
                       display: 'flex',
                       flexDirection: 'column',
                       alignItems: 'center',
                       justifyContent: 'center',
-                      width: '100%'
+                      padding: '20px 15px',
+                      height: '100%'
                     }}>
                       <div style={{
-                        background: '#181c24',
-                        borderRadius: '12px',
-                        padding: '15px',
+                        flex: 1,
                         display: 'flex',
+                        flexDirection: 'column',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        marginBottom: '15px',
-                        width: '80px',
-                        height: '80px',
-                        overflow: 'hidden'
+                        width: '100%'
                       }}>
-                        <FaviconImage 
-                          url={page.link} 
-                          title={page.title}
-                          fallbackImage={page.image}
-                          useLocalImage={page.useLocalImage}
-                          useLucideIcon={page.useLucideIcon}
-                        />
+                        <div style={{
+                          background: '#181c24',
+                          borderRadius: '12px',
+                          padding: '15px',
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          marginBottom: '15px',
+                          width: '80px',
+                          height: '80px',
+                          overflow: 'hidden'
+                        }}>
+                          <FaviconImage
+                            url={page.link}
+                            title={page.title}
+                            fallbackImage={page.image}
+                            useLocalImage={page.useLocalImage}
+                            useLucideIcon={page.useLucideIcon}
+                          />
+                        </div>
+                        <h3 className="web-page-title" style={{
+                          margin: 0,
+                          padding: 0,
+                          color: '#fff',
+                          fontSize: '0.95rem',
+                          fontWeight: 600,
+                          textAlign: 'center',
+                          wordBreak: 'break-word'
+                        }}>
+                          {page.title}
+                        </h3>
                       </div>
-                      <h3 className="web-page-title" style={{
-                        margin: 0,
-                        padding: 0,
-                        color: '#fff',
-                        fontSize: '0.95rem',
-                        fontWeight: 600,
-                        textAlign: 'center',
-                        wordBreak: 'break-word'
-                      }}>
-                        {page.title}
-                      </h3>
                     </div>
-                  </div>
-                </div>
-              </a>
-            ))}
-          </div>
-        )}
-
-        {activeTab === 'habilidades' && (
-          <div className="skills-grid">
-            {skills.map((skill, index) => (
-              <div key={index} className="skill-tag">
-                {skill}
-              </div>
-            ))}
-          </div>
-        )}
+                  </motion.div>
+                </motion.a>
+              ))}
+            </motion.div>
+          )}
+          {activeTab === 'habilidades' && (
+            <motion.div
+              key="habilidades"
+              className="skills-grid"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3 }}
+            >
+              {skills.map((skill, index) => (
+                <motion.div
+                  key={index}
+                  className="skill-tag"
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.3, delay: index * 0.05 }}
+                  whileHover={{
+                    scale: 1.1,
+                    y: -3,
+                    transition: { type: "spring", stiffness: 400, damping: 15 }
+                  }}
+                >
+                  {skill}
+                </motion.div>
+              ))}
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </section>
   )

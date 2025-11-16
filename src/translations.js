@@ -11,19 +11,19 @@ export const translations = {
     about: {
       aboutMe: {
         title: "Sobre mí",
-        description: "Analista de Sistemas con 3 años de experiencia en desarrollo web, especializado en React, Next.js y bases de datos."
+        description: "Soy Jesús, me enfoco en la construcción de aplicaciones web, escalables y mantenibles. "
       },
       frontend: {
-        title: "Desarrollo Frontend",
-        description: "Construyo interfaces modernas y responsivas usando React, Next.js, HTML, CSS, Tailwind, shadcn/ui y TypeScript. Aprendiendo Astro y React Native."
+        title: "Desarrollo Front-end",
+        description: "Construyo interfaces modernas y responsivas."
       },
       backend: {
         title: "Bases de Datos & Backend",
-        description: "Experiencia en integración de sistemas, APIs y manejo de bases de datos como PostgreSQL, SQL y Redis."
+        description: "Integro sistemas, APIs y manejo de bases de datos.  "
       },
       devops: {
-        title: "DevOps & Deploy",
-        description: "Automatizo despliegues y gestiono proyectos con Git, Docker, Coolify, Dockploy, Vercel y Netlify para lograr entregas rápidas y seguras."
+        title: "CI/CD & DevOps",
+        description: "Automatizo despliegues y gestiono proyectos para lograr entregas rápidas y ordenadas."
       }
     },
     portfolio: {
@@ -39,6 +39,9 @@ export const translations = {
         },
         dolar: {
           category: "Aplicación de cotización del dólar"
+        },
+        tiendea: {
+          category: "Plataforma de e-commerce"
         }
       }
     },
@@ -58,19 +61,19 @@ export const translations = {
     about: {
       aboutMe: {
         title: "About me",
-        description: "Systems Analyst with 3 years of experience in web development, specialized in React, Next.js and databases."
+        description: "I'm Jesus, I focus on building scalable and maintainable web applications."
       },
       frontend: {
         title: "Frontend Development",
-        description: "I build modern and responsive interfaces using React, Next.js, HTML, CSS, Tailwind, shadcn/ui and TypeScript. Learning Astro and React Native."
+        description: "I build modern and responsive interfaces."
       },
       backend: {
         title: "Databases & Backend",
-        description: "Experience in system integration, APIs and database management such as PostgreSQL, SQL and Redis."
+        description: "I integrate systems, APIs and database management."
       },
       devops: {
-        title: "DevOps & Deploy",
-        description: "I automate deployments and manage projects with Git, Docker, Coolify, Dockploy, Vercel and Netlify to achieve fast and secure deliveries."
+        title: "CI/CD & DevOps",
+        description: "I automate deployments and manage projects to achieve fast and organized deliveries."
       }
     },
     portfolio: {
@@ -86,6 +89,9 @@ export const translations = {
         },
         dolar: {
           category: "Dollar exchange rate application"
+        },
+        tiendea: {
+          category: "E-commerce platform"
         }
       }
     },
