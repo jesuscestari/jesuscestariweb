@@ -1,5 +1,5 @@
 import prof from '../assets/prof.webp'
-import avatar from '/avatar.png'
+import avatar from '/avatar.webp'
 import { ArrowDownToLine, Mail } from 'lucide-react';
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
