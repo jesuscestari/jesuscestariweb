@@ -53,7 +53,7 @@ const FaviconImage = ({ url, title, fallbackImage, useLocalImage, useLucideIcon 
       <Sparkles 
         size={40}
         style={{
-          color: '#fff'
+          color: '#e4e4e7'
         }}
       />
     )
@@ -93,6 +93,7 @@ const Portfolio = () => {
     {
       title: "elmenu.app",
       category: t.portfolio.projects.elmenu.category,
+      description: t.portfolio.projects.elmenu.description,
       image: "/logo2.webp",
       color: "#ff6b6b",
       link: "https://elmenu.app",
@@ -101,6 +102,7 @@ const Portfolio = () => {
     {
       title: "tiendea.app",
       category: t.portfolio.projects.tiendea.category,
+      description: t.portfolio.projects.tiendea.description,
       image: "/tiendeaLogo.png",
       color: "#10b981",
       link: "https://tiendea.app",
@@ -109,6 +111,7 @@ const Portfolio = () => {
     {
       title: "bellumsoftware.com",
       category: t.portfolio.projects.bellum.category,
+      description: t.portfolio.projects.bellum.description,
       image: "/logo.webp",
       color: "#8e44ad",
       link: "https://bellumsoftware.com",
@@ -117,6 +120,7 @@ const Portfolio = () => {
     {
       title: "dolardehoy.app",
       category: t.portfolio.projects.dolar.category,
+      description: t.portfolio.projects.dolar.description,
       image: "/logo3.png",
       color: "#4a90e2",
       link: "https://dolardehoy.app",
@@ -260,7 +264,14 @@ const Portfolio = () => {
                     className="project-card"
                     style={{
                       background: 'linear-gradient(135deg, #32314e 60%, #232946 100%)',
-                      display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'space-between', cursor: 'pointer', padding: '20px 10px'
+                      display: 'flex', 
+                      flexDirection: 'row', 
+                      alignItems: 'center', 
+                      justifyContent: 'space-between', 
+                      cursor: 'pointer', 
+                      padding: '25px 30px', 
+                      minHeight: '200px', 
+                      gap: '30px'
                     }}
                     whileHover={{
                       scale: 1.03,
@@ -268,34 +279,45 @@ const Portfolio = () => {
                       transition: { type: "spring", stiffness: 300, damping: 20 }
                     }}
                   >
-                    <div style={{flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
-                      <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '12px', width: '120px', height: '120px'}}>
-                        <img src={project.image} alt={project.title} style={{
-                          maxWidth: project.title === 'tiendea.app' ? '60px' : '80px',
-                          maxHeight: project.title === 'tiendea.app' ? '60px' : '80px',
-                          objectFit: 'contain',
-                          filter: project.title === 'tiendea.app' ? 'brightness(0) invert(1)' : 'none'
-                        }} />
-                      </div>
-                      <div className="project-info" style={{textAlign: 'center'}}>
-                        <p className="project-category">{project.category}</p>
-                        <h3 className="project-title" style={{margin: 0, padding: 0}}>
-                          <span style={{color: '#fff', textDecoration: 'none', wordBreak: 'break-all'}}>{project.title}</span>
-                        </h3>
-                      </div>
+                    <div className="project-image-container" style={{display: 'flex', alignItems: 'center', justifyContent: 'center', width: '150px', height: '150px', flexShrink: 0}}>
+                      <img src={project.image} alt={project.title} style={{
+                        maxWidth: project.title === 'tiendea.app' ? '80px' : '100px',
+                        maxHeight: project.title === 'tiendea.app' ? '80px' : '100px',
+                        objectFit: 'contain',
+                        filter: project.title === 'tiendea.app' ? 'brightness(0) invert(1)' : 'none'
+                      }} />
                     </div>
-                    {project.technologies && project.technologies.length > 0 && (
-                      <div style={{display: 'flex', gap: '8px', justifyContent: 'center', flexWrap: 'wrap', marginTop: '20px', paddingBottom: '10px'}}>
-                        {project.technologies.map((tech, techIndex) => (
-                          <img
-                            key={techIndex}
-                            src={getTechIcon(tech)}
-                            alt={tech}
-                            style={{width: '32px', height: '32px', objectFit: 'contain'}}
-                          />
-                        ))}
+                    <div className="project-content" style={{flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: '12px'}}>
+                      <div className="project-info" style={{textAlign: 'left', width: '100%'}}>
+                        <p className="project-category" style={{marginBottom: '6px'}}>{project.category}</p>
+                        <h3 className="project-title" style={{margin: '0 0 10px', padding: 0}}>
+                          <span style={{color: '#e4e4e7', textDecoration: 'none', wordBreak: 'break-all'}}>{project.title}</span>
+                        </h3>
+                        {project.description && (
+                          <p className="project-description" style={{
+                            color: '#a0a0a0',
+                            fontSize: '0.9rem',
+                            margin: '0',
+                            lineHeight: '1.6',
+                            maxWidth: '100%'
+                          }}>
+                            {project.description}
+                          </p>
+                        )}
                       </div>
-                    )}
+                      {project.technologies && project.technologies.length > 0 && (
+                        <div className="project-technologies" style={{display: 'flex', gap: '8px', justifyContent: 'flex-start', flexWrap: 'wrap', marginTop: '5px'}}>
+                          {project.technologies.map((tech, techIndex) => (
+                            <img
+                              key={techIndex}
+                              src={getTechIcon(tech)}
+                              alt={tech}
+                              style={{width: '32px', height: '32px', objectFit: 'contain'}}
+                            />
+                          ))}
+                        </div>
+                      )}
+                    </div>
                   </motion.div>
                 </motion.a>
               ))}
@@ -369,7 +391,7 @@ const Portfolio = () => {
                         <h3 className="web-page-title" style={{
                           margin: 0,
                           padding: 0,
-                          color: '#fff',
+                          color: '#e4e4e7',
                           fontSize: '0.95rem',
                           fontWeight: 600,
                           textAlign: 'center',

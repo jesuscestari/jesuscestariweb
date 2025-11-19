@@ -56,7 +56,7 @@ const About = () => {
                 }}
               >
                 <h3 className="titulo">
-                  <span><IconComponent size={24} color="#8b8ac0" /></span>
+                  <span><IconComponent size={20} color="#8b8ac0" /></span>
                   {service.title}
                 </h3>
                 <p className="texto">{service.description}</p>
