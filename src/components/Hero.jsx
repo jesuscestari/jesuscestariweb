@@ -131,7 +131,7 @@ const Hero = () => {
             {t.hero.cvButton} <ArrowDownToLine size={14} />
           </motion.a>
           <motion.a
-            href="mailto:jesuscestari@proton.me"
+            href="mailto:hi@jesuscestari.com"
             className="btn btn-secondary"
             target="_blank"
             whileHover={{ scale: 1.05, y: -2 }}

@@ -47,9 +47,7 @@ export const translations = {
         }
       }
     },
-    footer: {
-      copyright: "© 2025 | Jesus Cestari"
-    }
+   
   },
   en: {
     hero: {
@@ -99,9 +97,7 @@ export const translations = {
         }
       }
     },
-    footer: {
-      copyright: "© 2025 | Jesus Cestari"
-    }
+   
   }
 }
 

@@ -2,6 +2,7 @@ import { useLanguage } from '../contexts/LanguageContext'
 import { translations } from '../translations'
 import { motion } from 'motion/react'
 import { FaGithub } from 'react-icons/fa';
+import { Mail } from 'lucide-react';
 
 const Footer = () => {
   const { language } = useLanguage()
@@ -16,7 +17,12 @@ const Footer = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
       >
-        <p>{t.footer.copyright}</p>
+       
+        <p className="email-link" style={{ marginTop: '8px' }}>
+          <a href="mailto:hi@jesuscestari.com" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+            <Mail size={16} />hi@jesuscestari.com
+          </a>
+        </p>
         <p className="github-link" style={{ color: '#ffffff', marginTop: '8px' }}>
           <a href="https://github.com/jesuscestari" target="_blank" rel="noopener noreferrer" style={{ color: '#ffffff', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
             <FaGithub size={16} color="#ffffff" />GitHub <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ display: 'inline-block', verticalAlign: 'middle', marginLeft: '4px' }}>
