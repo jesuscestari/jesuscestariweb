@@ -121,7 +121,7 @@ const Hero = () => {
           transition={{ duration: 0.5, delay: 0.5 }}
         >
           <motion.a
-            href={language === 'es' ? "/CV_CESTARI_JESUS.pdf" : "/CESTARI_JESUS_EN.pdf"}
+            href={language === 'es' ? "/CV_CESTARI_JESUS.pdf" : "https://www.self.so/jesuscestari"}
             className="btn btn-primary"
             target="_blank"
             whileHover={{ scale: 1.05, y: -2 }}
