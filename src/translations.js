@@ -2,14 +2,14 @@ export const translations = {
   es: {
     hero: {
       title: "Jesus Cestari",
-      subtitle: "full stack + vibe coder",
+      subtitle: "full stack + product eng",
       cvButton: "CV",
       contactButton: "Enviar correo"
     },
     about: {
       aboutMe: {
         title: "Sobre mí",
-        description: "Soy Jesús, me enfoco en construir aplicaciones web escalables."
+        description: "Soy Jesús, me enfoco en construir aplicaciones web y móviles escalables."
       },
       frontend: {
         title: "Desarrollo Front-end",
@@ -52,14 +52,14 @@ export const translations = {
   en: {
     hero: {
       title: "Jesus Cestari",
-      subtitle: "full stack + vibe coder",
+      subtitle: "full stack + product eng",
       cvButton: "Resume",
       contactButton: "Send email"
     },
     about: {
       aboutMe: {
         title: "About me",
-        description: "I'm Jesus, I focus on building scalable web apps."
+        description: "I'm Jesus, I focus on building scalable web and mobile apps."
       },
       frontend: {
         title: "Frontend Development",
