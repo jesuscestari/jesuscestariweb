@@ -130,6 +130,13 @@ const Portfolio = () => {
 
   const webPages = [
     {
+      title: "josecestari.com",
+      link: "https://josecestari.com/",
+      technologies: ["astro", "html", "css"],
+      image: "/jose.png",
+      useLocalImage: true
+    },
+    {
       title: "Arquitectura emocional",
       link: "https://floraguerra.vercel.app/",
       technologies: ["nextjs", "react", "html", "css", "tailwind"],
@@ -371,13 +378,13 @@ const Portfolio = () => {
                         <div style={{
                           background: '#181c24',
                           borderRadius: '12px',
-                          padding: '15px',
+                          padding: '20px',
                           display: 'flex',
                           alignItems: 'center',
                           justifyContent: 'center',
                           marginBottom: '15px',
-                          width: '80px',
-                          height: '80px',
+                          width: '120px',
+                          height: '120px',
                           overflow: 'hidden'
                         }}>
                           <FaviconImage
