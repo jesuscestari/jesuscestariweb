@@ -83,7 +83,8 @@ const Portfolio = () => {
   const getTechIcon = (tech) => {
     const customIcons = {
       'dragonflydb': '/dragonfly.svg',
-      'coolify': '/coolify.svg'
+      'coolify': '/coolify.svg',
+      'reactnative': '/reactnative.svg'
     }
     return customIcons[tech] || `https://skillicons.dev/icons?i=${tech}`
   }
@@ -118,13 +119,13 @@ const Portfolio = () => {
       technologies: ["react"]
     },
     {
-      title: "dolardehoy.app",
+      title: "acuanto.app",
       category: t.portfolio.projects.dolar.category,
       description: t.portfolio.projects.dolar.description,
       image: "/logo3.png",
       color: "#4a90e2",
-      link: "https://dolardehoy.app",
-      technologies: ["nextjs", "tailwind", "typescript", "html", "dragonflydb", "coolify"]
+      link: "https://acuanto.app",
+      technologies: ["nextjs", "tailwind", "typescript", "html", "dragonflydb", "coolify", "reactnative"]
     }
   ]
 
@@ -320,6 +321,10 @@ const Portfolio = () => {
                               src={getTechIcon(tech)}
                               alt={tech}
                               style={{width: '32px', height: '32px', objectFit: 'contain'}}
+                              onError={(e) => {
+                                console.error(`Error loading icon for ${tech}:`, getTechIcon(tech))
+                                e.target.style.display = 'none'
+                              }}
                             />
                           ))}
                         </div>

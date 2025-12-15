@@ -89,7 +89,7 @@ export const translations = {
         },
         dolar: {
           category: "Dollar exchange rate application",
-          description: "A modern web application to calculate dollar to Venezuelan bolivar conversions using official BCV rates and Binance P2P rates in real-time."
+          description: "A modern web and mobile application to calculate dollar to Venezuelan bolivar conversions using official BCV rates and Binance P2P rates in real-time."
         },
         tiendea: {
           category: "E-commerce platform",
