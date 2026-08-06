@@ -20,4 +20,4 @@ Este es el repositorio de mi portfolio personal, donde comparto mis proyectos, e
 
 ¡Gracias por visitar mi portfolio! Si tienes alguna consulta o propuesta, no dudes en contactarme.
 
-📧 jesuscestari@proton.me
+📧 jescesta@gmail.com

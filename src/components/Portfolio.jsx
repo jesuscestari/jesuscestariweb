@@ -5,6 +5,7 @@ import { translations } from '../translations'
 import { motion, AnimatePresence } from 'motion/react'
 
 import desordenados from '../assets/desordenados.png'
+import logoMini from '../assets/logo_mini.webp'
 
 const FaviconImage = ({ url, title, fallbackImage, useLocalImage, useLucideIcon }) => {
   const [currentSrc, setCurrentSrc] = useState(() => {
@@ -92,6 +93,15 @@ const Portfolio = () => {
 
   const projects = [
     {
+      title: "pack.win",
+      category: t.portfolio.projects.packwin.category,
+      description: t.portfolio.projects.packwin.description,
+      image: logoMini,
+      color: "#6366f1",
+      link: "https://www.pack.win/",
+      technologies: ["nodejs", "express", "js", "mysql", "docker", "html", "css"]
+    },
+    {
       title: "elmenu.app",
       category: t.portfolio.projects.elmenu.category,
       description: t.portfolio.projects.elmenu.description,
@@ -131,11 +141,31 @@ const Portfolio = () => {
 
   const webPages = [
     {
-      title: "josecestari.com",
-      link: "https://josecestari.com/",
+      title: "filmsjosec.com",
+      link: "https://filmsjosec.com/",
       technologies: ["astro", "html", "css"],
       image: "/jose.png",
       useLocalImage: true
+    },
+    {
+      title: "belfica.com",
+      link: "https://www.belfica.com/",
+      technologies: ["astro", "html", "css", "tailwind"]
+    },
+    {
+      title: "bellumsoftware.com",
+      link: "https://bellumsoftware.com/",
+      technologies: ["react", "html", "css"]
+    },
+    {
+      title: "hvaescritoriojuridico.com",
+      link: "https://hvaescritoriojuridico.com/",
+      technologies: ["astro", "html", "css", "tailwind"]
+    },
+    {
+      title: "lodatolab.com",
+      link: "https://lodatolab.com/",
+      technologies: ["nextjs", "react", "html", "css", "tailwind"]
     },
     {
       title: "Arquitectura emocional",

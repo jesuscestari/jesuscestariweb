@@ -19,8 +19,8 @@ const Footer = () => {
       >
        
         <p className="email-link" style={{ marginTop: '8px' }}>
-          <a href="mailto:hi@jesuscestari.com" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
-            <Mail size={16} />hi@jesuscestari.com
+          <a href="mailto:jescesta@gmail.com" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+            <Mail size={16} />jescesta@gmail.com
           </a>
         </p>
         <p className="github-link" style={{ color: '#ffffff', marginTop: '8px' }}>

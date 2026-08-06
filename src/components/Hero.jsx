@@ -120,18 +120,18 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.5 }}
         >
-          <motion.a
-            href={language === 'es' ? "/CV_JESUS.pdf" : "https://www.self.so/jesuscestari"}
+          <motion.button
             className="btn btn-primary"
-            target="_blank"
+            onClick={(e) => e.preventDefault()}
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
             transition={{ type: "spring", stiffness: 400, damping: 15 }}
+            style={{ border: 'none', fontFamily: 'inherit' }}
           >
             {t.hero.cvButton} <ArrowDownToLine size={14} />
-          </motion.a>
+          </motion.button>
           <motion.a
-            href="mailto:hi@jesuscestari.com"
+            href="mailto:jescesta@gmail.com"
             className="btn btn-secondary"
             target="_blank"
             whileHover={{ scale: 1.05, y: -2 }}

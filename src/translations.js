@@ -29,6 +29,10 @@ export const translations = {
       webPages: "Paginas web",
       stack: "Stack",
       projects: {
+        packwin: {
+          category: "Plataforma web de juegos",
+          description: "Aplicación web de apertura de packs/cajas con sistema de inventario, batallas y unboxing en tiempo real."
+        },
         elmenu: {
           category: "App para restaurantes ",
           description: "Una plataforma SaaS multi-tenant que permite a restaurantes crear y gestionar menús digitales personalizados con subdominios dinámicos, QR en mesas y sistema de pedidos."
@@ -79,6 +83,10 @@ export const translations = {
       webPages: "Web pages",
       stack: "Stack",
       projects: {
+        packwin: {
+          category: "Web gaming platform",
+          description: "Web application for pack opening and mystery boxes with real-time battle and unboxing system."
+        },
         elmenu: {
           category: "Restaurant app ",
           description: "A multi-tenant SaaS platform that allows restaurants to create and manage customized digital menus with dynamic subdomains, table QR codes, and ordering system."
